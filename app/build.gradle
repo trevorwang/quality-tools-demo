@@ -1,0 +1,45 @@
+import legox.deps.Deps
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk Deps.BuildConfig.compileSdk
+
+    defaultConfig {
+        applicationId "com.example.quality"
+        minSdk Deps.BuildConfig.minSdk
+        targetSdk Deps.BuildConfig.targetSdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+
+dependencies {
+    implementation Deps.AndroidX.core_ktx
+    implementation Deps.AndroidX.appcompat
+    implementation Deps.AndroidX.design
+    implementation Deps.AndroidX.constraint_layout
+    testImplementation Deps.Tools.junit
+    androidTestImplementation Deps.Tools.junit_ext
+    androidTestImplementation Deps.Tools.espresso_core
+}
