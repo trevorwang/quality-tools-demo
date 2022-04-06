@@ -1,17 +1,15 @@
-import legox.deps.Deps
-
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
 
 android {
-    compileSdk Deps.BuildConfig.compileSdk
+    compileSdk BuildConfig.compileSdk
 
     defaultConfig {
         applicationId "com.example.quality"
-        minSdk Deps.BuildConfig.minSdk
-        targetSdk Deps.BuildConfig.targetSdk
+        minSdk BuildConfig.minSdk
+        targetSdk BuildConfig.targetSdk
         versionCode 1
         versionName "1.0"
 
@@ -35,11 +33,11 @@ android {
 
 
 dependencies {
-    implementation Deps.AndroidX.core_ktx
-    implementation Deps.AndroidX.appcompat
-    implementation Deps.AndroidX.design
-    implementation Deps.AndroidX.constraint_layout
-    testImplementation Deps.Tools.junit
-    androidTestImplementation Deps.Tools.junit_ext
-    androidTestImplementation Deps.Tools.espresso_core
+    implementation AndroidX.core_ktx
+    implementation AndroidX.appcompat
+    implementation AndroidX.design
+    implementation AndroidX.constraint_layout
+    testImplementation Tools.junit
+    androidTestImplementation Tools.junit_ext
+    androidTestImplementation Tools.espresso_core
 }
