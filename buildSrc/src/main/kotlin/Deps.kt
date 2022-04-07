@@ -16,6 +16,7 @@ object Versions {
     const val junit = "4.13.2"
     const val junit_ext = "1.1.1"
     const val espresso_core = "3.2.0"
+    const val dokit = "3.6.2"
 }
 
 object BuildConfig {
@@ -61,6 +62,8 @@ object Tools {
     const val junit_ext = "androidx.test.ext:junit:${Versions.junit_ext}"
     const val espresso_core = "androidx.test.espresso:espresso-core:${Versions.espresso_core}"
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
+    const val dokit = "io.github.didi.dokit:dokitx:${Versions.dokit}"
+    const val dokit_no_op = "io.github.didi.dokit:dokitx-no-op:${Versions.dokit}"
 }
 
 object Kotlin {
